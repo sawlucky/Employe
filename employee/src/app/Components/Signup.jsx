@@ -17,7 +17,6 @@ const Signup = () => {
       .post("http://localhost:5000/", formdata)
       .then((response) => {
         console.log(response.data);
-
         setFormdata({
           username: "",
           email: "",
@@ -34,7 +33,6 @@ const Signup = () => {
     const { name, value } = e.target;
     setFormdata({ ...formdata, [name]: value });
   };
-
   return (
     <div className="container">
       <form action="/" method="post" onSubmit={HandleSubmit}>
