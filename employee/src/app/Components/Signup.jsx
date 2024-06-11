@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios"; // Ensure axios is imported
-import "./up.css"; // Assuming you are importing the CSS
+import axios from "axios";
+import "./up.css";
 
 const Signup = () => {
   const [formdata, setFormdata] = useState({
@@ -17,7 +17,7 @@ const Signup = () => {
       .post("http://localhost:5000/", formdata)
       .then((response) => {
         console.log(response.data);
-        // Clear the form
+
         setFormdata({
           username: "",
           email: "",
@@ -37,11 +37,7 @@ const Signup = () => {
 
   return (
     <div className="container">
-      <form
-        action="/"
-        method="post"
-        onSubmit={HandleSubmit} // Call HandleSubmit directly
-      >
+      <form action="/" method="post" onSubmit={HandleSubmit}>
         <div className="box">
           <h1>Enter Details</h1>
           <div className="user">
